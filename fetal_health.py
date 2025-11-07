@@ -16,7 +16,7 @@ def csv_upload(file):
     return x
 
 fh_df = csv_upload('fetal_health.csv')
-fh_df.drop(columns = 'fetal_health')
+fh_df.drop(columns = 'fetal_health', inplace = True)
 
 @st.cache_resource
 def load_dt(file):
